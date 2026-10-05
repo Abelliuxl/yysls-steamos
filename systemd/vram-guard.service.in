@@ -1,0 +1,17 @@
+[Unit]
+Description=VRAM guard for yysls launcher (prevents amdgpu/GTT deadlock freeze)
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=YYSLS_APPID=@APPID@
+Environment=YYSLS_VRAM_LOG=@LOG@
+ExecStart=/usr/bin/python3 @INSTALL_DIR@/vram-guard.py
+Restart=on-failure
+RestartSec=5
+Nice=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,23 @@
+[Unit]
+Description=yysls (燕云十六声国服) launcher under GE-Proton — 用于下载/更新/启动
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=WINEPREFIX=@PREFIX@
+Environment=WINEDEBUG=err+all
+Environment=LD_LIBRARY_PATH=@PROTON_DIR@/files/lib/x86_64-linux-gnu:@PROTON_DIR@/files/lib
+# 模拟 Proton：让 d3d12 用 VKD3D-Proton、d3d11/dxgi 用 DXVK
+# （否则普通 wine 会挑自带的旧 vkd3d，游戏在 InitState 里空指针闪退）
+Environment=WINEDLLPATH=@PROTON_DIR@/files/lib/wine/vkd3d-proton:@PROTON_DIR@/files/lib/vkd3d:@PROTON_DIR@/files/lib/wine
+Environment=WINEDLLOVERRIDES=d3d11=n,b;d3d10core=n,b;d3d10=n,b;d3d10_1=n,b;d3d9=n,b;dxgi=n,b;d3d12=n,b;d3d12core=n,b
+WorkingDirectory=@WORKDIR@
+ExecStart=@PROTON_DIR@/files/bin/wine launcher.exe
+Restart=always
+RestartSec=25
+TimeoutStopSec=8
+KillMode=control-group
+
+[Install]
+WantedBy=default.target
