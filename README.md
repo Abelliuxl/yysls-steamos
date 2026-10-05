@@ -165,13 +165,10 @@ VRAM_GUARD_DRYRUN=1                   # 只记录不杀（调试）
 
 ## 授权 / License
 
-本项目采用 **CC BY-NC-SA 4.0**（署名—非商业性使用—相同方式共享）。
-完整法律文本见 [LICENSE](LICENSE)，中文说明见 [NOTICE.zh.md](NOTICE.zh.md)。
+本项目采用 **GNU GPL-3.0**（GNU General Public License v3.0）。完整法律文本见 [LICENSE](LICENSE)。
 
-- **署名**：转载/修改须注明原作者与出处；
-- **禁止商业性使用**：商用需另行获得作者授权；
-- **相同方式共享**：衍生作品必须以相同协议开源。
+- 可自由使用、修改、分发，甚至商用；
+- 但你分发**修改版 / 衍生作品**时，必须**同样以 GPL-3.0 开源**并提供完整源代码；
+- 必须保留版权与许可声明。
 
-作者本人保留全部权利，可自行商用并可另售商业许可（联系 GitHub @Abelliuxl）。
-
-> 这是 **source-available（源码可见）** 许可，**不是** OSI 认可的“开源（Open Source）”许可。
+> GPL-3.0 是 OSI 认可的 copyleft 开源协议；它**不禁止**他人商用，只要求衍生作品开源。
