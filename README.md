@@ -163,6 +163,15 @@ VRAM_GUARD_DRYRUN=1                   # 只记录不杀（调试）
 - [燕窝 Yanwo](https://github.com/Abelliuxl/yanwo) —— 第三方游戏聚合启动器，带手柄输入桥与
   gamescope 窗口规则引擎，本仓库的配置就是它的底层兼容层。
 
-## License
+## 授权 / License
 
-MIT，见 [LICENSE](LICENSE)。
+本项目采用 **CC BY-NC-SA 4.0**（署名—非商业性使用—相同方式共享）。
+完整法律文本见 [LICENSE](LICENSE)，中文说明见 [NOTICE.zh.md](NOTICE.zh.md)。
+
+- **署名**：转载/修改须注明原作者与出处；
+- **禁止商业性使用**：商用需另行获得作者授权；
+- **相同方式共享**：衍生作品必须以相同协议开源。
+
+作者本人保留全部权利，可自行商用并可另售商业许可（联系 GitHub @Abelliuxl）。
+
+> 这是 **source-available（源码可见）** 许可，**不是** OSI 认可的“开源（Open Source）”许可。
